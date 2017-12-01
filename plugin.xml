@@ -4,8 +4,8 @@
   Licensed under the MIT license.
 -->
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="com.mbxsw.vs.clean-cordova-build"
-    version="0.8.6">
+    id="darshanrampatel.vs.clean-cordova-build"
+    version="0.8.7">
     <name>Remove excess files plugin</name>
 	<author>Magic Box Software</author>
     <description>Plugin removes config, unminified js/css, specified and misc. files from the platform folder when creating app packages.</description>
@@ -20,7 +20,7 @@
 		
 		Files beginning with a "." dot are automatically removed as are .nupkg, packages.config and _references.js.
 	</info>
-    <repo>https://github.com/MagicBoxSoftware/vs-cordova-3-1-ignore-files</repo>
-    <issue>https://github.com/MagicBoxSoftware/vs-cordova-3-1-ignore-files/issues</issue>
+    <repo>https://github.com/darshanrampatel/vs-cordova-3-1-ignore-files</repo>
+    <issue>https://github.com/darshanrampatel/vs-cordova-3-1-ignore-files/issues</issue>
     <hook type="after_prepare" src="remove-excess-files.js" />
 </plugin>
