@@ -21,7 +21,18 @@ module.exports = function (context) {
     context.opts.cordova.platforms.forEach(function(platform) {
 		//Platform www directory path
 		var pwww = "platforms/" + platform + "/assets/www/";
-		
+	    	switch(platform.toLowerCase())
+	    	{
+		    	case "android":
+			    	pwww  = pwww + platform + "/assets/www/";
+			    	break;
+			case "ios":
+		    		pwww = pwww + platform + "/www/";
+		    		break;	
+			default:
+				pwww = "platforms/" + platform + "/assets/www/"
+				break;
+	    	}
 	//Remove unminified js and css if minified exists.
 		jsCssPattern = "@(*.css|*.js)";
 		glob(pwww + "**/" + jsCssPattern, function(err, jsCssFiles) {
